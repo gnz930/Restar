@@ -1,0 +1,339 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		809F8C204E75EA0BE1281C8E /* PaymentRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8B3A4839FC28804E2583C2 /* PaymentRowView.swift */; };
+		8A83F9D172BF25590825A77D /* AppBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29740A3FA1C7C76354323D9C /* AppBackgroundView.swift */; };
+		93744900D0CFEDACA4B99B7B /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5468DB723D96FAECBDFD50 /* Payment.swift */; };
+		9C6BA3757509E2BC8C7E8557 /* PaymentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FD289A8B4B644398073FAA /* PaymentStore.swift */; };
+		ABE48A98AA5D21896BB1165C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0386585D87C00F3D9003766B /* ContentView.swift */; };
+		AC2B07114DB40AAD9D8EE5D2 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACCBB22EE6B29E8C12408FD /* SummaryView.swift */; };
+		AF1937DC33B12D95B0EA5DD1 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC544BFCF76FCBDF2E4D04A /* Formatters.swift */; };
+		C253D3610658F2910A675296 /* ShiharaikunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D3B301B0D0A159D797BB04 /* ShiharaikunApp.swift */; };
+		D46151CA3BFD74A68D580AB5 /* PaymentFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC7A35E28CD06240B92DD76 /* PaymentFormView.swift */; };
+		D5B5F37A27217B4673DE09C5 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A96808DA12B77708CEFB16 /* EmptyStateView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0386585D87C00F3D9003766B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0CC7A35E28CD06240B92DD76 /* PaymentFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentFormView.swift; sourceTree = "<group>"; };
+		1ACCBB22EE6B29E8C12408FD /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+		29740A3FA1C7C76354323D9C /* AppBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBackgroundView.swift; sourceTree = "<group>"; };
+		57D3B301B0D0A159D797BB04 /* ShiharaikunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiharaikunApp.swift; sourceTree = "<group>"; };
+		5D54276D69D1106A2F8CF213 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		7DC544BFCF76FCBDF2E4D04A /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
+		945DDE4BD6427C92A7A84D8A /* Shiharaikun.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Shiharaikun.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		94FD289A8B4B644398073FAA /* PaymentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentStore.swift; sourceTree = "<group>"; };
+		9C5468DB723D96FAECBDFD50 /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
+		B4A96808DA12B77708CEFB16 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		FD8B3A4839FC28804E2583C2 /* PaymentRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentRowView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		23FD5E815510FF39E2F5A082 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				29740A3FA1C7C76354323D9C /* AppBackgroundView.swift */,
+				B4A96808DA12B77708CEFB16 /* EmptyStateView.swift */,
+				0CC7A35E28CD06240B92DD76 /* PaymentFormView.swift */,
+				FD8B3A4839FC28804E2583C2 /* PaymentRowView.swift */,
+				1ACCBB22EE6B29E8C12408FD /* SummaryView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		99EFB7AB587C9E29F983817E = {
+			isa = PBXGroup;
+			children = (
+				B08BE9263876FC9F04EB3EA8 /* Shiharaikun */,
+				EB00F022F5AC7AC1A89AA3CA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B08BE9263876FC9F04EB3EA8 /* Shiharaikun */ = {
+			isa = PBXGroup;
+			children = (
+				0386585D87C00F3D9003766B /* ContentView.swift */,
+				5D54276D69D1106A2F8CF213 /* Info.plist */,
+				57D3B301B0D0A159D797BB04 /* ShiharaikunApp.swift */,
+				B87025D13ED99B908A07F12E /* Models */,
+				23FD5E815510FF39E2F5A082 /* Views */,
+			);
+			path = Shiharaikun;
+			sourceTree = "<group>";
+		};
+		B87025D13ED99B908A07F12E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7DC544BFCF76FCBDF2E4D04A /* Formatters.swift */,
+				9C5468DB723D96FAECBDFD50 /* Payment.swift */,
+				94FD289A8B4B644398073FAA /* PaymentStore.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EB00F022F5AC7AC1A89AA3CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				945DDE4BD6427C92A7A84D8A /* Shiharaikun.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		02ABE9CFFDC54CEA9B13AAAA /* Shiharaikun */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FBA13C4D192B4816CFB2CD31 /* Build configuration list for PBXNativeTarget "Shiharaikun" */;
+			buildPhases = (
+				BC61A9EA723184C919673B87 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Shiharaikun;
+			packageProductDependencies = (
+			);
+			productName = Shiharaikun;
+			productReference = 945DDE4BD6427C92A7A84D8A /* Shiharaikun.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C5307A7920780A2EBE3CA0FF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					02ABE9CFFDC54CEA9B13AAAA = {
+						DevelopmentTeam = "";
+					};
+				};
+			};
+			buildConfigurationList = 93EB41A98845B0D22A7D1E61 /* Build configuration list for PBXProject "Shiharaikun" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 99EFB7AB587C9E29F983817E;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				02ABE9CFFDC54CEA9B13AAAA /* Shiharaikun */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BC61A9EA723184C919673B87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A83F9D172BF25590825A77D /* AppBackgroundView.swift in Sources */,
+				ABE48A98AA5D21896BB1165C /* ContentView.swift in Sources */,
+				D5B5F37A27217B4673DE09C5 /* EmptyStateView.swift in Sources */,
+				AF1937DC33B12D95B0EA5DD1 /* Formatters.swift in Sources */,
+				93744900D0CFEDACA4B99B7B /* Payment.swift in Sources */,
+				D46151CA3BFD74A68D580AB5 /* PaymentFormView.swift in Sources */,
+				809F8C204E75EA0BE1281C8E /* PaymentRowView.swift in Sources */,
+				9C6BA3757509E2BC8C7E8557 /* PaymentStore.swift in Sources */,
+				C253D3610658F2910A675296 /* ShiharaikunApp.swift in Sources */,
+				AC2B07114DB40AAD9D8EE5D2 /* SummaryView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		15F86C48F008423881C80148 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		48536AC3F05C6E36CD244D24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Shiharaikun/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.shiharaikun.app;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		486E726BFE42CFD0D77768DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		D8615DCFA9AE21C72066F118 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Shiharaikun/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.shiharaikun.app;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		93EB41A98845B0D22A7D1E61 /* Build configuration list for PBXProject "Shiharaikun" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15F86C48F008423881C80148 /* Debug */,
+				486E726BFE42CFD0D77768DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FBA13C4D192B4816CFB2CD31 /* Build configuration list for PBXNativeTarget "Shiharaikun" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8615DCFA9AE21C72066F118 /* Debug */,
+				48536AC3F05C6E36CD244D24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C5307A7920780A2EBE3CA0FF /* Project object */;
+}

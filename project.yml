@@ -1,0 +1,26 @@
+name: Shiharaikun
+options:
+  deploymentTarget:
+    iOS: "16.0"
+  bundleIdPrefix: com.shiharaikun
+
+settings:
+  base:
+    DEVELOPMENT_TEAM: ""
+
+targets:
+  Shiharaikun:
+    type: application
+    platform: iOS
+    sources:
+      - path: Shiharaikun
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.shiharaikun.app
+    info:
+      path: Shiharaikun/Info.plist
+      properties:
+        CFBundleDisplayName: Shiharaikun
+        UILaunchScreen: {}
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
