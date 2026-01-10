@@ -43,12 +43,14 @@ struct PaymentFormView: View {
         }
     }
 
+    @EnvironmentObject private var store: PaymentStore
     @Environment(\.dismiss) private var dismiss
     @Environment(\.locale) private var locale
 
     let mode: Mode
     let onSave: (Payment) -> Void
 
+    @State private var showMasterData = false
     @State private var name: String
     @State private var amountText: String
     @State private var frequencyChoice: FrequencyChoice
@@ -56,6 +58,10 @@ struct PaymentFormView: View {
     @State private var lastPaidDate: Date
     @State private var isActive: Bool
     @State private var notes: String
+    @State private var methodType: PaymentMethodType
+    @State private var selectedPayeeId: UUID?
+    @State private var selectedBankAccountId: UUID?
+    @State private var selectedCardId: UUID?
 
     init(mode: Mode, onSave: @escaping (Payment) -> Void) {
         self.mode = mode
@@ -67,6 +73,10 @@ struct PaymentFormView: View {
         _lastPaidDate = State(initialValue: payment?.lastPaidDate ?? Date())
         _isActive = State(initialValue: payment?.isActive ?? true)
         _notes = State(initialValue: payment?.notes ?? "")
+        _methodType = State(initialValue: payment?.methodType ?? .unspecified)
+        _selectedPayeeId = State(initialValue: payment?.payeeId)
+        _selectedBankAccountId = State(initialValue: payment?.bankAccountId)
+        _selectedCardId = State(initialValue: payment?.creditCardId)
 
         let months = payment?.frequencyMonths ?? 1
         if months == 1 {
@@ -116,6 +126,39 @@ struct PaymentFormView: View {
                         .keyboardType(.numberPad)
 
                     (Text("form.input_amount_prefix") + Text(Formatters.yen(amountValue)))
+                        .font(.custom("Avenir Next", size: 12))
+                        .foregroundColor(.secondary)
+                }
+
+                Section(header: Text("form.section.payee")) {
+                    if store.payees.isEmpty {
+                        Text("form.payee_empty")
+                            .font(.custom("Avenir Next", size: 12))
+                            .foregroundColor(.secondary)
+
+                        Button("form.manage_master") {
+                            showMasterData = true
+                        }
+                    } else {
+                        Picker("form.payee_picker", selection: $selectedPayeeId) {
+                            Text("value.unset").tag(UUID?.none)
+                            ForEach(store.payees) { payee in
+                                Text(payee.displayName).tag(Optional(payee.id))
+                            }
+                        }
+                        .pickerStyle(.menu)
+                    }
+                }
+
+                Section(header: Text("form.section.method")) {
+                    Picker("form.method_picker", selection: $methodType) {
+                        ForEach(PaymentMethodType.allCases) { method in
+                            Text(LocalizedStringKey(method.titleKey)).tag(method)
+                        }
+                    }
+                    .pickerStyle(.segmented)
+
+                    Text("form.method_hint")
                         .font(.custom("Avenir Next", size: 12))
                         .foregroundColor(.secondary)
                 }
@@ -170,7 +213,7 @@ struct PaymentFormView: View {
                     }
                 }
             }
-            .navigationTitle(Text(mode.titleKey))
+            .navigationTitle(Text(LocalizedStringKey(mode.titleKey)))
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button("form.cancel") {
@@ -180,6 +223,8 @@ struct PaymentFormView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("form.save") {
                         let trimmed = name.trimmingCharacters(in: .whitespacesAndNewlines)
+                        let methodBankId = methodType == .bankTransfer ? selectedBankAccountId : nil
+                        let methodCardId = methodType == .creditCard ? selectedCardId : nil
                         let payment = Payment(
                             id: mode.payment?.id ?? UUID(),
                             name: trimmed,
@@ -187,13 +232,22 @@ struct PaymentFormView: View {
                             frequencyMonths: frequencyMonths,
                             lastPaidDate: lastPaidDate,
                             isActive: isActive,
-                            notes: notes.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ? nil : notes
+                            notificationsEnabled: mode.payment?.notificationsEnabled ?? true,
+                            notes: notes.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ? nil : notes,
+                            methodType: methodType,
+                            bankAccountId: methodBankId,
+                            creditCardId: methodCardId,
+                            payeeId: selectedPayeeId
                         )
                         onSave(payment)
                         dismiss()
                     }
                     .disabled(!canSave)
                 }
+            }
+            .sheet(isPresented: $showMasterData) {
+                MasterDataView()
+                    .environmentObject(store)
             }
         }
     }

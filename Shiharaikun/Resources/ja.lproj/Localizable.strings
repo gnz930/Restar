@@ -1,6 +1,11 @@
 "app.title" = "しはらいくん";
 
+"settings.menu" = "設定";
 "settings.language" = "言語";
+"settings.master_data" = "支払い方法管理";
+
+"settings.notifications_on" = "通知オン";
+"settings.notifications_off" = "通知オフ";
 "language.japanese" = "日本語";
 "language.english" = "English";
 
@@ -24,11 +29,25 @@
 
 "label.next_due" = "次回:";
 "label.annual_cost" = "年換算:";
+"label.method" = "支払い方法:";
+"label.payee" = "支払い先:";
+
+"method.unset" = "未設定";
+"method.bank_transfer" = "口座振替";
+"method.credit_card" = "クレジットカード";
+"value.unset" = "未設定";
+
 "action.mark_paid" = "支払い済みにする";
 "status.paused" = "停止中";
 "action.pause" = "停止";
 "action.resume" = "再開";
 "action.delete" = "削除";
+"action.more" = "その他";
+
+"action.notifications_on" = "通知オン";
+"action.notifications_off" = "通知オフ";
+
+"action.toggle_amounts" = "金額を非表示/表示";
 
 "frequency.monthly" = "毎月";
 "frequency.yearly" = "毎年";
@@ -36,9 +55,11 @@
 "frequency.every_n_months_prefix" = "";
 "frequency.every_n_months_suffix" = "ヶ月ごと";
 
-"form.add_title" = "支払いを追加";
-"form.edit_title" = "支払いを編集";
+"form.add_title" = "支払いを登録";
+"form.edit_title" = "支払いを更新";
 "form.section.basic" = "基本情報";
+"form.section.payee" = "支払い先";
+"form.section.method" = "支払い方法";
 "form.section.frequency" = "頻度";
 "form.section.last_paid" = "直近の支払日";
 "form.section.status" = "ステータス";
@@ -56,3 +77,71 @@
 "form.monthly_label" = "月間換算";
 "form.cancel" = "キャンセル";
 "form.save" = "保存";
+"form.payee_picker" = "支払い先";
+"form.payee_empty" = "支払い先がまだありません";
+"form.method_picker" = "支払い方法";
+"form.bank_picker" = "銀行口座";
+"form.card_picker" = "カード";
+"form.bank_empty" = "銀行口座がまだありません";
+"form.card_empty" = "カードがまだありません";
+"form.manage_master" = "支払い方法を管理";
+
+"master.title" = "支払い方法管理";
+"master.payee.title" = "支払い先";
+"master.bank.title" = "銀行口座";
+"master.card.title" = "クレジットカード";
+"master.done" = "完了";
+"master.payee.empty.title" = "支払い先がありません";
+"master.payee.empty.message" = "右上の + から追加できます";
+"master.bank.empty.title" = "銀行口座がありません";
+"master.bank.empty.message" = "右上の + から追加できます";
+"master.card.empty.title" = "カードがありません";
+"master.card.empty.message" = "右上の + から追加できます";
+
+"editor.section.basic" = "基本情報";
+"editor.name" = "名称";
+"editor.note" = "メモ";
+"editor.bank.name" = "銀行口座名";
+"editor.bank.detail" = "銀行口座詳細";
+"editor.card.name" = "カード名";
+"editor.card.last4" = "下4桁";
+"editor.payee.add" = "支払い先を追加";
+"editor.payee.edit" = "支払い先を編集";
+"editor.bank.add" = "口座を追加";
+"editor.bank.edit" = "口座を編集";
+"editor.card.add" = "カードを追加";
+"editor.card.edit" = "カードを編集";
+"editor.cancel" = "キャンセル";
+"editor.save" = "保存";
+"settings.method_assignment" = "支払い方法割り当て";
+"method_assign.title" = "支払い方法割り当て";
+"method_assign.empty.title" = "支払いがありません";
+"method_assign.empty.message" = "先に支払いを登録してください";
+"method_assign.unset" = "支払い方法を選択してください";
+"method_assign.select_bank" = "使用する銀行口座";
+"method_assign.select_card" = "使用するカード";
+"method_assign.bank_empty" = "銀行口座がまだありません";
+"method_assign.card_empty" = "カードがまだありません";
+"form.method_hint" = "口座/カードの詳細はあとで設定できます";
+
+"notification.title" = "支払いリマインド";
+"notification.body" = "%@ の支払い（%@）は %@ です";
+"notification.memo" = "メモ: %@";
+
+
+"action.details" = "詳細";
+"action.edit" = "編集";
+
+"detail.title" = "支払い詳細";
+"detail.section.summary" = "概要";
+"detail.section.method" = "支払い情報";
+"detail.section.notes" = "メモ";
+"detail.amount" = "金額";
+"detail.next_due" = "次回支払日";
+"detail.last_paid" = "直近の支払日";
+"detail.frequency" = "頻度";
+"detail.payee" = "支払い先";
+"detail.method" = "支払い方法";
+"detail.annual_cost" = "年換算";
+"detail.monthly_cost" = "月間換算";
+"detail.notes" = "メモ";

@@ -13,20 +13,22 @@ struct EmptyStateView: View {
     }
 
     var body: some View {
-        VStack(spacing: 12) {
-            Image(systemName: "tray")
-                .font(.system(size: 34))
-                .foregroundColor(Color(red: 0.46, green: 0.56, blue: 0.55))
+        GlassPanel(cornerRadius: 22, padding: 20, tint: Color.white) {
+            VStack(spacing: 12) {
+                Image(systemName: "tray")
+                    .font(.system(size: 32))
+                    .symbolRenderingMode(.hierarchical)
+                    .foregroundColor(Color(red: 0.3, green: 0.42, blue: 0.44))
 
-            Text(title)
-                .font(.custom("Avenir Next", size: 16).weight(.semibold))
+                Text(title)
+                    .font(.custom("Avenir Next", size: 16).weight(.semibold))
+                    .foregroundColor(Color(red: 0.1, green: 0.16, blue: 0.2))
 
-            Text(message)
-                .font(.custom("Avenir Next", size: 13))
-                .foregroundColor(.secondary)
+                Text(message)
+                    .font(.custom("Avenir Next", size: 13))
+                    .foregroundColor(.secondary)
+            }
+            .frame(maxWidth: .infinity)
         }
-        .padding(.vertical, 18)
-        .frame(maxWidth: .infinity)
-        .listRowBackground(Color.clear)
     }
 }

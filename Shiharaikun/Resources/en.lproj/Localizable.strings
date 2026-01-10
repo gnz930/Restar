@@ -1,6 +1,11 @@
 "app.title" = "Shiharaikun";
 
+"settings.menu" = "Settings";
 "settings.language" = "Language";
+"settings.master_data" = "Payment Methods";
+
+"settings.notifications_on" = "Notifications On";
+"settings.notifications_off" = "Notifications Off";
 "language.japanese" = "Japanese";
 "language.english" = "English";
 
@@ -24,11 +29,25 @@
 
 "label.next_due" = "Next due:";
 "label.annual_cost" = "Annual:";
+"label.method" = "Method:";
+"label.payee" = "Payee:";
+
+"method.unset" = "Not set";
+"method.bank_transfer" = "Bank transfer";
+"method.credit_card" = "Credit card";
+"value.unset" = "Not set";
+
 "action.mark_paid" = "Mark paid";
 "status.paused" = "Paused";
 "action.pause" = "Pause";
 "action.resume" = "Resume";
 "action.delete" = "Delete";
+"action.more" = "More";
+
+"action.notifications_on" = "Notify On";
+"action.notifications_off" = "Notify Off";
+
+"action.toggle_amounts" = "Toggle amounts";
 
 "frequency.monthly" = "Monthly";
 "frequency.yearly" = "Yearly";
@@ -36,9 +55,11 @@
 "frequency.every_n_months_prefix" = "Every ";
 "frequency.every_n_months_suffix" = " months";
 
-"form.add_title" = "Add Payment";
-"form.edit_title" = "Edit Payment";
+"form.add_title" = "Register Payment";
+"form.edit_title" = "Update Payment";
 "form.section.basic" = "Basics";
+"form.section.payee" = "Payee";
+"form.section.method" = "Payment method";
 "form.section.frequency" = "Frequency";
 "form.section.last_paid" = "Last paid";
 "form.section.status" = "Status";
@@ -56,3 +77,71 @@
 "form.monthly_label" = "Monthly avg";
 "form.cancel" = "Cancel";
 "form.save" = "Save";
+"form.payee_picker" = "Payee";
+"form.payee_empty" = "No payees yet";
+"form.method_picker" = "Payment method";
+"form.bank_picker" = "Bank account";
+"form.card_picker" = "Credit card";
+"form.bank_empty" = "No bank accounts yet";
+"form.card_empty" = "No credit cards yet";
+"form.manage_master" = "Manage payment methods";
+
+"master.title" = "Payment Methods";
+"master.payee.title" = "Payees";
+"master.bank.title" = "Bank Accounts";
+"master.card.title" = "Credit Cards";
+"master.done" = "Done";
+"master.payee.empty.title" = "No payees yet";
+"master.payee.empty.message" = "Tap + to add a payee";
+"master.bank.empty.title" = "No bank accounts yet";
+"master.bank.empty.message" = "Tap + to add a bank account";
+"master.card.empty.title" = "No credit cards yet";
+"master.card.empty.message" = "Tap + to add a credit card";
+
+"editor.section.basic" = "Basics";
+"editor.name" = "Name";
+"editor.note" = "Note";
+"editor.bank.name" = "Bank account name";
+"editor.bank.detail" = "Bank account details";
+"editor.card.name" = "Card name";
+"editor.card.last4" = "Last 4 digits";
+"editor.payee.add" = "Add Payee";
+"editor.payee.edit" = "Edit Payee";
+"editor.bank.add" = "Add Bank Account";
+"editor.bank.edit" = "Edit Bank Account";
+"editor.card.add" = "Add Credit Card";
+"editor.card.edit" = "Edit Credit Card";
+"editor.cancel" = "Cancel";
+"editor.save" = "Save";
+"settings.method_assignment" = "Assign Methods";
+"method_assign.title" = "Assign Methods";
+"method_assign.empty.title" = "No payments yet";
+"method_assign.empty.message" = "Add a payment first";
+"method_assign.unset" = "Select a payment method in the payment edit screen";
+"method_assign.select_bank" = "Select bank account";
+"method_assign.select_card" = "Select card";
+"method_assign.bank_empty" = "No bank accounts yet";
+"method_assign.card_empty" = "No credit cards yet";
+"form.method_hint" = "You can set the specific account/card later";
+
+"notification.title" = "Payment Reminder";
+"notification.body" = "%@ payment (%@) is due on %@";
+"notification.memo" = "Note: %@";
+
+
+"action.details" = "Details";
+"action.edit" = "Edit";
+
+"detail.title" = "Payment Details";
+"detail.section.summary" = "Overview";
+"detail.section.method" = "Payment Info";
+"detail.section.notes" = "Notes";
+"detail.amount" = "Amount";
+"detail.next_due" = "Next Due";
+"detail.last_paid" = "Last Paid";
+"detail.frequency" = "Frequency";
+"detail.payee" = "Payee";
+"detail.method" = "Method";
+"detail.annual_cost" = "Annual";
+"detail.monthly_cost" = "Monthly";
+"detail.notes" = "Notes";
