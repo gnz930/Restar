@@ -39,16 +39,6 @@ struct Payment: Identifiable, Codable, Equatable {
         Double(amountYen) / Double(max(1, frequencyMonths))
     }
 
-    var frequencyLabel: String {
-        if frequencyMonths == 1 {
-            return "毎月"
-        }
-        if frequencyMonths == 12 {
-            return "毎年"
-        }
-        return "\(frequencyMonths)ヶ月ごと"
-    }
-
     static func nextDueDate(from lastPaidDate: Date, frequencyMonths: Int) -> Date {
         let months = max(1, frequencyMonths)
         return Calendar.current.date(byAdding: .month, value: months, to: lastPaidDate) ?? lastPaidDate

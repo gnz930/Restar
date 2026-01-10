@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct PaymentRowView: View {
+    @Environment(\.locale) private var locale
+
     let payment: Payment
     let onMarkPaid: () -> Void
     let onToggleActive: () -> Void
@@ -13,12 +15,12 @@ struct PaymentRowView: View {
                         .font(.custom("Avenir Next", size: 18).weight(.semibold))
 
                     HStack(spacing: 6) {
-                        Text(payment.frequencyLabel)
+                        frequencyLabel
                             .font(.custom("Avenir Next", size: 13))
                             .foregroundColor(.secondary)
                         Text("・")
                             .foregroundColor(.secondary)
-                        Text("次回: \(Formatters.date.string(from: payment.nextDueDate))")
+                        (Text("label.next_due") + Text(" ") + Text(Formatters.dateString(payment.nextDueDate, locale: locale)))
                             .font(.custom("Avenir Next", size: 13))
                             .foregroundColor(.secondary)
                     }
@@ -29,7 +31,7 @@ struct PaymentRowView: View {
                 VStack(alignment: .trailing, spacing: 8) {
                     Text(Formatters.yen(payment.amountYen))
                         .font(.custom("Avenir Next", size: 18).weight(.bold))
-                    Text("年換算: \(Formatters.yen(payment.annualCostYen))")
+                    (Text("label.annual_cost") + Text(" ") + Text(Formatters.yen(payment.annualCostYen)))
                         .font(.custom("Avenir Next", size: 12))
                         .foregroundColor(.secondary)
                 }
@@ -38,13 +40,13 @@ struct PaymentRowView: View {
             HStack {
                 if payment.isActive {
                     Button(action: onMarkPaid) {
-                        Text("支払い済みにする")
+                        Text("action.mark_paid")
                             .font(.custom("Avenir Next", size: 13).weight(.semibold))
                     }
                     .buttonStyle(.borderedProminent)
                     .tint(Color(red: 0.14, green: 0.48, blue: 0.45))
                 } else {
-                    Text("停止中")
+                    Text("status.paused")
                         .font(.custom("Avenir Next", size: 13).weight(.semibold))
                         .foregroundColor(.secondary)
                 }
@@ -52,7 +54,7 @@ struct PaymentRowView: View {
                 Spacer()
 
                 Button(action: onToggleActive) {
-                    Text(payment.isActive ? "停止" : "再開")
+                    Text(payment.isActive ? "action.pause" : "action.resume")
                         .font(.custom("Avenir Next", size: 13))
                 }
                 .buttonStyle(.bordered)
@@ -65,5 +67,15 @@ struct PaymentRowView: View {
                 .fill(Color.white.opacity(0.95))
                 .shadow(color: Color.black.opacity(0.06), radius: 10, x: 0, y: 6)
         )
+    }
+
+    private var frequencyLabel: Text {
+        if payment.frequencyMonths == 1 {
+            return Text("frequency.monthly")
+        }
+        if payment.frequencyMonths == 12 {
+            return Text("frequency.yearly")
+        }
+        return Text("frequency.every_n_months_prefix") + Text("\(payment.frequencyMonths)") + Text("frequency.every_n_months_suffix")
     }
 }

@@ -5,12 +5,12 @@ struct PaymentFormView: View {
         case add
         case edit(Payment)
 
-        var title: String {
+        var titleKey: String {
             switch self {
             case .add:
-                return "支払いを追加"
+                return "form.add_title"
             case .edit:
-                return "支払いを編集"
+                return "form.edit_title"
             }
         }
 
@@ -24,15 +24,27 @@ struct PaymentFormView: View {
         }
     }
 
-    enum FrequencyChoice: String, CaseIterable, Identifiable {
-        case monthly = "毎月"
-        case yearly = "毎年"
-        case custom = "nヶ月ごと"
+    enum FrequencyChoice: CaseIterable, Identifiable {
+        case monthly
+        case yearly
+        case custom
 
-        var id: String { rawValue }
+        var id: Self { self }
+
+        var titleKey: String {
+            switch self {
+            case .monthly:
+                return "frequency.monthly"
+            case .yearly:
+                return "frequency.yearly"
+            case .custom:
+                return "frequency.custom"
+            }
+        }
     }
 
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.locale) private var locale
 
     let mode: Mode
     let onSave: (Payment) -> Void
@@ -96,75 +108,77 @@ struct PaymentFormView: View {
     var body: some View {
         NavigationStack {
             Form {
-                Section(header: Text("基本情報")) {
-                    TextField("支払い名", text: $name)
+                Section(header: Text("form.section.basic")) {
+                    TextField("form.name_placeholder", text: $name)
                         .textInputAutocapitalization(.never)
 
-                    TextField("金額 (円)", text: $amountText)
+                    TextField("form.amount_placeholder", text: $amountText)
                         .keyboardType(.numberPad)
 
-                    Text("入力中: \(Formatters.yen(amountValue))")
+                    (Text("form.input_amount_prefix") + Text(Formatters.yen(amountValue)))
                         .font(.custom("Avenir Next", size: 12))
                         .foregroundColor(.secondary)
                 }
 
-                Section(header: Text("頻度")) {
-                    Picker("頻度", selection: $frequencyChoice) {
+                Section(header: Text("form.section.frequency")) {
+                    Picker("form.frequency_picker", selection: $frequencyChoice) {
                         ForEach(FrequencyChoice.allCases) { option in
-                            Text(option.rawValue).tag(option)
+                            Text(LocalizedStringKey(option.titleKey)).tag(option)
                         }
                     }
                     .pickerStyle(.segmented)
 
                     if frequencyChoice == .custom {
-                        Stepper("\(customMonths)ヶ月ごと", value: $customMonths, in: 2...24)
+                        Stepper(value: $customMonths, in: 2...24) {
+                            frequencyEveryNMonthsLabel(customMonths)
+                        }
                     }
 
                     HStack {
-                        Text("次回予定")
+                        Text("form.next_due")
                         Spacer()
-                        Text(Formatters.date.string(from: nextDueDate))
+                        Text(Formatters.dateString(nextDueDate, locale: locale))
                             .foregroundColor(.secondary)
                     }
                 }
 
-                Section(header: Text("直近の支払日")) {
-                    DatePicker("日付", selection: $lastPaidDate, displayedComponents: .date)
+                Section(header: Text("form.section.last_paid")) {
+                    DatePicker("form.date_label", selection: $lastPaidDate, displayedComponents: .date)
                 }
 
-                Section(header: Text("ステータス")) {
-                    Toggle("この支払いを続ける", isOn: $isActive)
+                Section(header: Text("form.section.status")) {
+                    Toggle("form.toggle_active", isOn: $isActive)
                 }
 
-                Section(header: Text("メモ")) {
-                    TextField("例: 年払い、カード決済", text: $notes, axis: .vertical)
+                Section(header: Text("form.section.notes")) {
+                    TextField("form.notes_placeholder", text: $notes, axis: .vertical)
                         .lineLimit(2, reservesSpace: true)
                 }
 
-                Section(header: Text("サマリー")) {
+                Section(header: Text("form.section.summary")) {
                     HStack {
-                        Text("年換算")
+                        Text("form.annual_label")
                         Spacer()
                         Text(Formatters.yen(Double(amountValue) * 12.0 / Double(max(1, frequencyMonths))))
                             .foregroundColor(.secondary)
                     }
                     HStack {
-                        Text("月間換算")
+                        Text("form.monthly_label")
                         Spacer()
                         Text(Formatters.yen(Double(amountValue) / Double(max(1, frequencyMonths))))
                             .foregroundColor(.secondary)
                     }
                 }
             }
-            .navigationTitle(mode.title)
+            .navigationTitle(Text(mode.titleKey))
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button("キャンセル") {
+                    Button("form.cancel") {
                         dismiss()
                     }
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("保存") {
+                    Button("form.save") {
                         let trimmed = name.trimmingCharacters(in: .whitespacesAndNewlines)
                         let payment = Payment(
                             id: mode.payment?.id ?? UUID(),
@@ -182,5 +196,9 @@ struct PaymentFormView: View {
                 }
             }
         }
+    }
+
+    private func frequencyEveryNMonthsLabel(_ months: Int) -> Text {
+        Text("frequency.every_n_months_prefix") + Text("\(months)") + Text("frequency.every_n_months_suffix")
     }
 }

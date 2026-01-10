@@ -3,17 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 63;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		809F8C204E75EA0BE1281C8E /* PaymentRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8B3A4839FC28804E2583C2 /* PaymentRowView.swift */; };
 		8A83F9D172BF25590825A77D /* AppBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29740A3FA1C7C76354323D9C /* AppBackgroundView.swift */; };
 		93744900D0CFEDACA4B99B7B /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5468DB723D96FAECBDFD50 /* Payment.swift */; };
+		9384E1F02866FC3CCFDDADF1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FCD8A2C070DE21567229DD28 /* Localizable.strings */; };
 		9C6BA3757509E2BC8C7E8557 /* PaymentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FD289A8B4B644398073FAA /* PaymentStore.swift */; };
 		ABE48A98AA5D21896BB1165C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0386585D87C00F3D9003766B /* ContentView.swift */; };
 		AC2B07114DB40AAD9D8EE5D2 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACCBB22EE6B29E8C12408FD /* SummaryView.swift */; };
 		AF1937DC33B12D95B0EA5DD1 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC544BFCF76FCBDF2E4D04A /* Formatters.swift */; };
+		B6873A46796E434A3AC09E59 /* AppLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE085B57FB115BC960363EE4 /* AppLanguage.swift */; };
 		C253D3610658F2910A675296 /* ShiharaikunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D3B301B0D0A159D797BB04 /* ShiharaikunApp.swift */; };
 		D46151CA3BFD74A68D580AB5 /* PaymentFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC7A35E28CD06240B92DD76 /* PaymentFormView.swift */; };
 		D5B5F37A27217B4673DE09C5 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A96808DA12B77708CEFB16 /* EmptyStateView.swift */; };
@@ -27,10 +29,13 @@
 		57D3B301B0D0A159D797BB04 /* ShiharaikunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiharaikunApp.swift; sourceTree = "<group>"; };
 		5D54276D69D1106A2F8CF213 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7DC544BFCF76FCBDF2E4D04A /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
-		945DDE4BD6427C92A7A84D8A /* Shiharaikun.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Shiharaikun.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		945DDE4BD6427C92A7A84D8A /* Shiharaikun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shiharaikun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94FD289A8B4B644398073FAA /* PaymentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentStore.swift; sourceTree = "<group>"; };
 		9C5468DB723D96FAECBDFD50 /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
 		B4A96808DA12B77708CEFB16 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		C1B70951F7C31D251946856D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C254CB98C60F7A4CC0B9436C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DE085B57FB115BC960363EE4 /* AppLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLanguage.swift; sourceTree = "<group>"; };
 		FD8B3A4839FC28804E2583C2 /* PaymentRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -45,6 +50,14 @@
 				1ACCBB22EE6B29E8C12408FD /* SummaryView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		7515874DAB8869F4E24251BF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FCD8A2C070DE21567229DD28 /* Localizable.strings */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		99EFB7AB587C9E29F983817E = {
@@ -62,6 +75,7 @@
 				5D54276D69D1106A2F8CF213 /* Info.plist */,
 				57D3B301B0D0A159D797BB04 /* ShiharaikunApp.swift */,
 				B87025D13ED99B908A07F12E /* Models */,
+				7515874DAB8869F4E24251BF /* Resources */,
 				23FD5E815510FF39E2F5A082 /* Views */,
 			);
 			path = Shiharaikun;
@@ -70,6 +84,7 @@
 		B87025D13ED99B908A07F12E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DE085B57FB115BC960363EE4 /* AppLanguage.swift */,
 				7DC544BFCF76FCBDF2E4D04A /* Formatters.swift */,
 				9C5468DB723D96FAECBDFD50 /* Payment.swift */,
 				94FD289A8B4B644398073FAA /* PaymentStore.swift */,
@@ -93,6 +108,7 @@
 			buildConfigurationList = FBA13C4D192B4816CFB2CD31 /* Build configuration list for PBXNativeTarget "Shiharaikun" */;
 			buildPhases = (
 				BC61A9EA723184C919673B87 /* Sources */,
+				2E6E5665A7D69726F77FA09F /* Resources */,
 			);
 			buildRules = (
 			);
@@ -112,7 +128,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 2600;
 				TargetAttributes = {
 					02ABE9CFFDC54CEA9B13AAAA = {
 						DevelopmentTeam = "";
@@ -126,10 +142,10 @@
 			knownRegions = (
 				Base,
 				en,
+				ja,
 			);
 			mainGroup = 99EFB7AB587C9E29F983817E;
 			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -138,12 +154,24 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		2E6E5665A7D69726F77FA09F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9384E1F02866FC3CCFDDADF1 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BC61A9EA723184C919673B87 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8A83F9D172BF25590825A77D /* AppBackgroundView.swift in Sources */,
+				B6873A46796E434A3AC09E59 /* AppLanguage.swift in Sources */,
 				ABE48A98AA5D21896BB1165C /* ContentView.swift in Sources */,
 				D5B5F37A27217B4673DE09C5 /* EmptyStateView.swift in Sources */,
 				AF1937DC33B12D95B0EA5DD1 /* Formatters.swift in Sources */,
@@ -158,11 +186,24 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		FCD8A2C070DE21567229DD28 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C254CB98C60F7A4CC0B9436C /* en */,
+				C1B70951F7C31D251946856D /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		15F86C48F008423881C80148 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -197,6 +238,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -217,6 +259,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -243,6 +286,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -277,6 +321,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -290,6 +335,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;

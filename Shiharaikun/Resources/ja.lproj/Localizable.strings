@@ -1,0 +1,58 @@
+"app.title" = "しはらいくん";
+
+"settings.language" = "言語";
+"language.japanese" = "日本語";
+"language.english" = "English";
+
+"list.mode.upcoming" = "1週間以内";
+"list.mode.all" = "全件表示";
+"list.mode.label" = "表示切り替え";
+
+"section.upcoming.title" = "1週間以内の支払い";
+"section.all.title" = "支払い一覧";
+"section.inactive.title" = "停止中";
+
+"empty.default.title" = "まだ登録がありません";
+"empty.default.message" = "右上の + から支払いを追加できます";
+"empty.upcoming.title" = "1週間以内の支払いはありません";
+"empty.upcoming.message" = "支払い予定が近づくとここに表示されます";
+
+"summary.monthly_total" = "月間合計";
+"summary.annual_total" = "年間合計";
+"summary.items_label" = "登録数";
+"summary.items_suffix" = "件";
+
+"label.next_due" = "次回:";
+"label.annual_cost" = "年換算:";
+"action.mark_paid" = "支払い済みにする";
+"status.paused" = "停止中";
+"action.pause" = "停止";
+"action.resume" = "再開";
+"action.delete" = "削除";
+
+"frequency.monthly" = "毎月";
+"frequency.yearly" = "毎年";
+"frequency.custom" = "nヶ月ごと";
+"frequency.every_n_months_prefix" = "";
+"frequency.every_n_months_suffix" = "ヶ月ごと";
+
+"form.add_title" = "支払いを追加";
+"form.edit_title" = "支払いを編集";
+"form.section.basic" = "基本情報";
+"form.section.frequency" = "頻度";
+"form.section.last_paid" = "直近の支払日";
+"form.section.status" = "ステータス";
+"form.section.notes" = "メモ";
+"form.section.summary" = "サマリー";
+"form.name_placeholder" = "支払い名";
+"form.amount_placeholder" = "金額 (円)";
+"form.input_amount_prefix" = "入力中: ";
+"form.frequency_picker" = "頻度";
+"form.next_due" = "次回予定";
+"form.date_label" = "日付";
+"form.toggle_active" = "この支払いを続ける";
+"form.notes_placeholder" = "例: 年払い、カード決済";
+"form.annual_label" = "年換算";
+"form.monthly_label" = "月間換算";
+"form.cancel" = "キャンセル";
+"form.save" = "保存";

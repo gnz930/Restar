@@ -1,0 +1,58 @@
+"app.title" = "Shiharaikun";
+
+"settings.language" = "Language";
+"language.japanese" = "Japanese";
+"language.english" = "English";
+
+"list.mode.upcoming" = "Next 7 days";
+"list.mode.all" = "All";
+"list.mode.label" = "View";
+
+"section.upcoming.title" = "Upcoming payments (7 days)";
+"section.all.title" = "All payments";
+"section.inactive.title" = "Paused";
+
+"empty.default.title" = "No payments yet";
+"empty.default.message" = "Tap + to add a payment";
+"empty.upcoming.title" = "Nothing due in the next 7 days";
+"empty.upcoming.message" = "Upcoming payments will appear here";
+
+"summary.monthly_total" = "Monthly total";
+"summary.annual_total" = "Annual total";
+"summary.items_label" = "Items";
+"summary.items_suffix" = " items";
+
+"label.next_due" = "Next due:";
+"label.annual_cost" = "Annual:";
+"action.mark_paid" = "Mark paid";
+"status.paused" = "Paused";
+"action.pause" = "Pause";
+"action.resume" = "Resume";
+"action.delete" = "Delete";
+
+"frequency.monthly" = "Monthly";
+"frequency.yearly" = "Yearly";
+"frequency.custom" = "Every n months";
+"frequency.every_n_months_prefix" = "Every ";
+"frequency.every_n_months_suffix" = " months";
+
+"form.add_title" = "Add Payment";
+"form.edit_title" = "Edit Payment";
+"form.section.basic" = "Basics";
+"form.section.frequency" = "Frequency";
+"form.section.last_paid" = "Last paid";
+"form.section.status" = "Status";
+"form.section.notes" = "Notes";
+"form.section.summary" = "Summary";
+"form.name_placeholder" = "Name";
+"form.amount_placeholder" = "Amount (JPY)";
+"form.input_amount_prefix" = "Entered: ";
+"form.frequency_picker" = "Frequency";
+"form.next_due" = "Next due";
+"form.date_label" = "Date";
+"form.toggle_active" = "Keep active";
+"form.notes_placeholder" = "e.g. annual, card payment";
+"form.annual_label" = "Annualized";
+"form.monthly_label" = "Monthly avg";
+"form.cancel" = "Cancel";
+"form.save" = "Save";

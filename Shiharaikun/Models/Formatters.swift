@@ -10,13 +10,13 @@ enum Formatters {
         return formatter
     }()
 
-    static let date: DateFormatter = {
+    static func dateString(_ date: Date, locale: Locale) -> String {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         formatter.timeStyle = .none
-        formatter.locale = Locale(identifier: "ja_JP")
-        return formatter
-    }()
+        formatter.locale = locale
+        return formatter.string(from: date)
+    }
 
     static func yen(_ amount: Double) -> String {
         let rounded = Int(amount.rounded())

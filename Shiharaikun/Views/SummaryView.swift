@@ -15,7 +15,7 @@ struct SummaryView: View {
         VStack(alignment: .leading, spacing: 16) {
             HStack {
                 VStack(alignment: .leading, spacing: 4) {
-                    Text("月間合計")
+                    Text("summary.monthly_total")
                         .font(.custom("Avenir Next", size: 14))
                         .foregroundColor(.secondary)
                     Text(Formatters.yen(monthlyTotal))
@@ -26,7 +26,7 @@ struct SummaryView: View {
                 Spacer()
 
                 VStack(alignment: .trailing, spacing: 4) {
-                    Text("年間合計")
+                    Text("summary.annual_total")
                         .font(.custom("Avenir Next", size: 14))
                         .foregroundColor(.secondary)
                     Text(Formatters.yen(annualTotal))
@@ -36,10 +36,10 @@ struct SummaryView: View {
             }
 
             HStack {
-                Text("登録数")
+                Text("summary.items_label")
                     .font(.custom("Avenir Next", size: 13))
                     .foregroundColor(.secondary)
-                Text("\(payments.count)件")
+                (Text("\(payments.count)") + Text("summary.items_suffix"))
                     .font(.custom("Avenir Next", size: 14).weight(.semibold))
                     .foregroundColor(Color(red: 0.14, green: 0.48, blue: 0.45))
             }
